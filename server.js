@@ -51,7 +51,8 @@ app.get("/add", function(req, res) {
 
 // Get all characters
 app.get("/all", function(req, res) {
-  res.json(characters);
+  //res.json(characters);
+  res.sendFile(path.join(__dirname, "all.html"));
 });
 
 // Search for Specific Character (or all characters) - provides JSON
